@@ -1,0 +1,17 @@
+<div>
+  <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= @employee.first_name %> <%=@employee.last_name %></h5>
+        <p class="card-text">Email: <%= @employee.email %> </p>
+        <p class="card-text">Position: <%= @employee.position %></p>
+        <p class="card-text">Contact Number: <%= @employee.phone %></p>
+      </div>
+  </div>
+    <br/>
+    <%= link_to "Edit this employee", edit_employee_path(@employee), class:"btn btn-secondary" %>
+    <%= link_to "Back to employees", employees_path, class:"btn btn-secondary"  %>
+    <br/>
+  </div>
+    <br/>
+    <%= button_to "Delete this employee", @employee, method: :delete, class:"btn btn-outline-danger bg-light" %>
+</div>

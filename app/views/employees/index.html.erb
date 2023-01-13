@@ -1,0 +1,26 @@
+<table class="table table-striped table-bordered table-hover bg-light">
+  <thead class="table-dark bg-light">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Position</th>
+      <th colspan=""></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each do |employee| %>
+    <% if employee.user == current_user%>
+    <tr>
+      <td><%= link_to employee.first_name + ' ' + employee.last_name, employee %></td>
+      <td><%= employee.email %></td>
+      <td><%= employee.phone %></td>
+      <td><%= employee.position %></td>
+      <td><%= link_to 'Delete', employee, method: :delete,data:{ confirm: 'Are you sure?' },class:"btn btn-outline-danger" %></td>
+    </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Employee', new_employee_path, class:"btn btn-primary" %>
