@@ -3,13 +3,13 @@
 one:
   first_name: MyString
   last_name: MyString
-  email: MyString
+  email: one@one.com
   phone: MyString
   position: MyString
 
 two:
   first_name: MyString
   last_name: MyString
-  email: MyString
+  email: two@two.com
   phone: MyString
   position: MyString
